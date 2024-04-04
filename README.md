@@ -31,7 +31,7 @@ I initially used an ESP32 for development and testing, but it ended up being too
 <a href="https://www.aliexpress.us/item/2251832863673404.html?spm=a2g0o.order_list.order_list_main.31.303b18028Ev81Z&gatewayAdapt=glo2usa">ESP32 I used</a>
 ## Body Design
 
-To design the body, I traced an image of a stratocaster in Onshape, then after fixing some weird unruly spline points I was able to extrude it and add some triangular cutouts. It wasn't too difficult but it took a while to do by hand. The fretboard and headstock were designed the same way. 
+To design the body, I traced an image of a stratocaster in Onshape, then after fixing some weird unruly spline points I was able to extrude it and add some triangular cutouts. It wasn't too difficult but it took a while to do by hand. The fretboard and headstock were designed the same way. \
   <img src="https://github.com/pyroinventor/nRF52840-Clone-Hero-Controller/assets/77114423/2ee516ed-50e7-47c2-9472-503d2a9701ef" height="300">
   <img src="https://github.com/pyroinventor/nRF52840-Clone-Hero-Controller/assets/77114423/2ddec0f5-d8b1-416e-b938-4e5759a58ed5" height="300"> 
 
