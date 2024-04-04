@@ -47,9 +47,11 @@ The strum bar was a little tricky to dial in and it took a few revisions, but th
 
 * 1 x Xiao nRF52840
 * 7 x Low Profile Mechanical Switches (I used Gateron LP Reds) 
-* Few feet of wire, I used cat5 cable I had laying around (6+ conductors)
+* Few feet of cat5 cable or several lengths of wire (9 conductors total)
 * 14AWG Steel Wire or similar for strum bar axle
+* 2 x small washers to fit wire (STL included)
 * 3D Printer / filament
+All parts can be found in the STLs folder
 
 ## Build
 Note: This guide assumes the reader can route wires and solder given the appropriate connections
@@ -99,13 +101,23 @@ Here's the start button. I don't have it mounted, it just runs through one of th
 Here are the cat5 conductors soldered on to the nRF52840: \
 I would recommend soldering onto removable header pins to make troubleshooting easier. \
 <img src="https://github.com/pyroinventor/nRF52840-Clone-Hero-Controller/assets/77114423/27014152-a74d-4e01-a4f3-471ca2c1562e" height="400"> \
-It doesn't matter too much which pins you use (besides ground) as long as they're configured correctly in the software.
+It doesn't matter too much which pins you use (besides ground) as long as they're configured correctly in the software. \
+I added a couple male jumper wires to the board's battery pads to connect to a 1s lipo cell, but it can also be powered via USB.
 
 That's about it for the main build 🎉
 
 ## Software
 
+The arduino sketch is built around Adafruit's Bluefruit library for their nRF52 feather board. While this isn't the exact board this project uses, the code still works just fine. HID support comes from the Adafruit TinyUSB Arduino library. \
+The main thing you might have to change is buttonPins:
 
-
+```
+const int buttonPins[] = {0, 1, 2, 3, 4, 5, 6, 7};  // GPIO pin numbers for buttons
+```
+Just set these values to whatever pins you soldered the fret, strum, and start buttons to. The actual button asignments are calibrated in Clone Hero. \
+You will probably have to add the Xiao nRF52840 board manually, in the arduino ide just go to Tools/Board/Boards Manager and search for Seeed nRF52 Boards. \
+<img src="https://github.com/pyroinventor/nRF52840-Clone-Hero-Controller/assets/77114423/f3bbe129-a014-478f-895f-5456b5cf95fa" height="400"> \
+And there you have it! Once you've set the GPIO pins and selected the correct board and COM port you should be good to upload. \
+Once everthing is up and running, you should be able to pair to your computer, assign the buttons in Clone Hero, and start jamming!
 
 
