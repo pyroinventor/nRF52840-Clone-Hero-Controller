@@ -46,10 +46,11 @@ The strum bar was a little tricky to dial in and it took a few revisions, but th
 ## Parts
 
 * 1 x Xiao nRF52840
-* 7 x Low Profile Mechanical Switches (I used Gateron LP Reds) 
+* 8 x Low Profile Mechanical Switches (I used Gateron LP Reds)
+  * 5 for frets, 2 for strum bar, and 1 for start
 * Few feet of cat5 cable or several lengths of wire (9 conductors total)
 * 14AWG Steel Wire or similar for strum bar axle
-* 2 x small washers to fit wire (STL included)
+* 2 x small washers to fit wire 
 * 3D Printer / filament
 All parts can be found in the STLs folder
 
@@ -59,6 +60,7 @@ Note: This guide assumes the reader can route wires and solder given the appropr
 ### 1. Print all the parts and see how they go together. You should have 11 total:
 
 * 5 keycaps
+* 1 start button
 * Headstock
 * Fretboard
 * Mounting plate
@@ -102,6 +104,7 @@ Here are the cat5 conductors soldered on to the nRF52840: \
 I would recommend soldering onto removable header pins to make troubleshooting easier. \
 <img src="https://github.com/pyroinventor/nRF52840-Clone-Hero-Controller/assets/77114423/27014152-a74d-4e01-a4f3-471ca2c1562e" height="400"> \
 It doesn't matter too much which pins you use (besides ground) as long as they're configured correctly in the software. \
+Conveniently, the nRF board has interal pullup resistors so you can simply solder the buttons directly to the pins. \
 I added a couple male jumper wires to the board's battery pads to connect to a 1s lipo cell, but it can also be powered via USB.
 
 That's about it for the main build 🎉
