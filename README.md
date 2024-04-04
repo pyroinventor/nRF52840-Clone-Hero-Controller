@@ -104,14 +104,14 @@ Here are the cat5 conductors soldered on to the nRF52840: \
 I would recommend soldering onto removable header pins to make troubleshooting easier. \
 <img src="https://github.com/pyroinventor/nRF52840-Clone-Hero-Controller/assets/77114423/27014152-a74d-4e01-a4f3-471ca2c1562e" height="400"> \
 It doesn't matter too much which pins you use (besides ground) as long as they're configured correctly in the software. \
-Conveniently, the nRF board has interal pullup resistors so you can simply solder the buttons directly to the pins. \
+Conveniently, the nRF board has internal pullup resistors so no additional circuitry is required. \
 I added a couple male jumper wires to the board's battery pads to connect to a 1s lipo cell, but it can also be powered via USB.
 
 That's about it for the main build 🎉
 
 ## Software
 
-The arduino sketch is built around Adafruit's Bluefruit library for their nRF52 feather board. While this isn't the exact board this project uses, the code still works just fine. HID support comes from the Adafruit TinyUSB Arduino library. \
+The arduino sketch I've included is built around Adafruit's library for their Bluefruit nRF52 feather boards. While this isn't the exactly what this project uses, the code still works just fine. HID support comes from the Adafruit TinyUSB Arduino library. \
 The main thing you might have to change is buttonPins:
 
 ```
